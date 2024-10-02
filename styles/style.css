@@ -67,6 +67,7 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
+  position: relative; /* Для отображения прелоадеров */
   height: 298px;
   width: 399px;
   overflow-y: auto;
@@ -132,3 +133,4 @@ ol {
 .content__video-card-description-container {
   width: 100%;
 }
+
