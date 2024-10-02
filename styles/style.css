@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -35,4 +38,54 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 1140px;
+  column-gap: 30px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.search-form__fieldset {
+  flex: 1; /* Пропорционально распределяем свободное пространство */
+  margin-right: 20px; /* Отступ между элементами */
+}
+
+.search-form__fieldset:last-child {
+  margin-right: 0; /* Убираем отступ у последнего элемента */
+}
+
+.content__list {
+  height: 298px;
+  width: 399px;
+  overflow-y: auto;
+}
+
+.content__details {
+  width: 100%;
+  height: 100%;
+  gap: 26px;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 26px;
+}
+
+.content__accent {
+  color: #545050;
 }
