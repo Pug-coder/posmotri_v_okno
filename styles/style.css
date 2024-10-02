@@ -65,6 +65,8 @@ ol {
 }
 
 .content__list {
+  display: flex;
+  flex-direction: column;
   height: 298px;
   width: 399px;
   overflow-y: auto;
@@ -88,4 +90,45 @@ ol {
 
 .content__accent {
   color: #545050;
+}
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  position: relative; /* Для абсолютного позиционирования видео внутри контейнера */
+  overflow: hidden; /* Обрезаем всё, что выходит за пределы контейнера */
+}
+
+.result__video {
+  width: 100%; /* Заставляем видео занимать всю ширину контейнера */
+  height: 100%; /* Заставляем видео занимать всю высоту контейнера */
+  object-fit: cover; /* Масштабирует видео, чтобы оно занимало контейнер, сохраняя пропорции */
+  position: absolute; /* Фиксируем видео внутри контейнера */
+  top: 0;
+  left: 0;
+}
+
+.content__list-item {
+  margin-bottom: 30px; /* Отступ между элементами списка */
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0; /* Убираем отступ у последнего элемента */
+}
+
+.content__video-card {
+  display: flex;
+  
+  justify-self: center;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover;  
+}
+
+.content__video-card-description-container {
+  width: 100%;
 }
