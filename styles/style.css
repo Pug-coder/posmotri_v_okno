@@ -53,11 +53,13 @@ ol {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  margin-top: 16px;
 }
 
 .search-form__fieldset {
-  flex: 1; /* Пропорционально распределяем свободное пространство */
-  margin-right: 20px; /* Отступ между элементами */
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* в соотвествии с макетом */
 }
 
 .search-form__fieldset:last-child {
@@ -134,3 +136,33 @@ ol {
   width: 100%;
 }
 
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.content__video-card-title {
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.content__video-card-description {
+  /* присмотрись к линиям */
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
+  color: #fff;
+}
