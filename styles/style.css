@@ -121,7 +121,6 @@ ol {
 
 .content__video-card {
   display: flex;
-  
   justify-self: center;
   align-items: flex-start;
 }
@@ -188,6 +187,11 @@ ol {
   cursor: pointer;
 }
 
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px; /* край обводки */
+}
+
 .search-form__textfield {
   font-family: inherit;
   background-color: transparent;
@@ -243,4 +247,48 @@ ol {
   width: 399px;
   justify-content: center;
   align-self: center;
+}
+
+/* псевдоэлемент для первого соседа зажатого чекбокса */
+/*
+  1) input[type="checkbox"]:checked — селектор, который выбирает зажатый чекбокс
+  2) + .search-form__pseudo-checkbox — соседний элемент
+  3) ::before — создаёт псевдоэлемент перед содержимым этого соседнего элемента.
+*/
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin: 1px; /* выравнивание по центру обводки */
+}
+
+/* cтиль при наведении на весь лейбл */
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+
+/* cостояние при наведении */
+button:hover {
+  text-decoration: underline #fff;
+}
+
+/* cостояние при нажатии */
+button:active {
+  background: #545050;
+}
+
+/* cостояние при видимом фокусе */
+button:focus-visible {
+  appearance: none;
+  outline: none;
+  border: none;
+  border: double #fff; /* нашел двойную границу, которая перезаписывает старую */
+}
+
+/* сброс фокуса */
+button:focus {
+  outline: none; /* сбрасываем стандартную обводку при фокусе */
 }
