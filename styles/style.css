@@ -235,6 +235,29 @@ ol {
   height: 34px;
 }
 
+/* cостояние при наведении */
+button:hover {
+  text-decoration: underline #fff;
+}
+
+/* cостояние при нажатии */
+button:active {
+  background: #545050;
+}
+
+/* cостояние при видимом фокусе */
+button:focus-visible {
+  appearance: none;
+  outline: none;
+  border: none;
+  border: double #fff; /* нашел двойную границу, которая перезаписывает старую */
+}
+
+/* сброс фокуса */
+button:focus {
+  outline: none; /* сбрасываем стандартную обводку при фокусе */
+}
+
 .search-form__submit-button {
   margin-top: 15px;
   width: 194px;
@@ -267,28 +290,4 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 /* cтиль при наведении на весь лейбл */
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
-}
-
-
-/* cостояние при наведении */
-button:hover {
-  text-decoration: underline #fff;
-}
-
-/* cостояние при нажатии */
-button:active {
-  background: #545050;
-}
-
-/* cостояние при видимом фокусе */
-button:focus-visible {
-  appearance: none;
-  outline: none;
-  border: none;
-  border: double #fff; /* нашел двойную границу, которая перезаписывает старую */
-}
-
-/* сброс фокуса */
-button:focus {
-  outline: none; /* сбрасываем стандартную обводку при фокусе */
 }
