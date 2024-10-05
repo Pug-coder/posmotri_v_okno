@@ -74,6 +74,8 @@ ol {
   height: 298px;
   width: 399px;
   overflow-y: auto;
+  /* Убираем ширину, которую могут занимать элементы больше контейнера */
+  box-sizing: border-box; /* Включаем padding и border в ширину */
 }
 
 .content__details {
@@ -113,6 +115,7 @@ ol {
 
 .content__list-item {
   margin-bottom: 30px; /* Отступ между элементами списка */
+  width: 100%; /* Элементы занимают 100% ширины списка, так мы убираем горизонтальный скрол */
 }
 
 .content__list-item:last-child {
@@ -157,6 +160,10 @@ ol {
   line-height: 100%;
   text-transform: uppercase;
   color: #fff;
+  white-space: nowrap; /* Не переносить текст на новую строку */
+  overflow: hidden; /* Скрыть текст, выходящий за пределы блока */
+  text-overflow: ellipsis; /* Добавить многоточие, если текст не помещается */
+  max-width: 192px; /* Ограничиваем ширину блока заголовка */
 }
 
 .content__video-card-description {
