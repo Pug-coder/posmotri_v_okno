@@ -60,6 +60,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 5px; /* в соотвествии с макетом */
+  border: none;
 }
 
 .search-form__fieldset:last-child {
@@ -82,7 +83,7 @@ ol {
 }
 
 .title {
-  font-family: "Oswald", sans-serif;;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -99,7 +100,6 @@ ol {
   width: 711px;
   height: 386px;
   position: relative; /* Для абсолютного позиционирования видео внутри контейнера */
-  overflow: hidden; /* Обрезаем всё, что выходит за пределы контейнера */
 }
 
 .result__video {
@@ -175,11 +175,6 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-}
-
-/* убираем границы */
-.search-form__fieldset {
-  border: none;
 }
 
 .search-form__label {
