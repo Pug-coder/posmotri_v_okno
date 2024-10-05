@@ -128,7 +128,8 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  object-fit: cover;  
+  object-fit: cover;
+  object-position: center; /* Центрируем видео по горизонтали и вертикали внутри контейнера */
 }
 
 .content__video-card-description-container {
