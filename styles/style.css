@@ -115,7 +115,7 @@ ol {
 
 .content__list-item {
   margin-bottom: 30px; /* Отступ между элементами списка */
-  width: 100%; /* Элементы занимают 100% ширины списка, так мы убираем горизонтальный скрол */
+  width: 100%; /* Элементы занимают 100% ширины списка, так мы убираем горизонтальный */
 }
 
 .content__list-item:last-child {
@@ -188,6 +188,9 @@ ol {
 
 .search-form__label {
   /* flex-direction: row; не работает */
+  display: flex;
+  align-items: center; /* выравнивание по вертикальной оси */
+  gap: 5px; /* добавляем отступы, тк после флекса поехали :) */
   width: fit-content;
   cursor: pointer;
 }
@@ -312,11 +315,12 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   background-color: #545050;
 }
 
+/* порядок определения стилей имеет значение ^_^ */
+.content__card-link:focus {
+  outline: none;
+}
+
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
-}
-
-.content__card-link:focus {
-  outline: none;
 }
