@@ -74,6 +74,11 @@ ol {
   height: 298px;
   width: 399px;
   overflow-y: auto;
+  /* 
+    кнопка показать еще 
+    была заданной ширины,
+    поэтому был горизонтальный скрол 
+  */
   /* Убираем ширину, которую могут занимать элементы больше контейнера */
   box-sizing: border-box; /* Включаем padding и border в ширину */
 }
@@ -276,7 +281,7 @@ button:focus {
 }
 
 .more-button {
-  width: 399px;
+  width: 100%; /* кнопка была заданной ширины, поэтому был горизонтальный скрол */
   justify-content: center;
   align-self: center;
 }
